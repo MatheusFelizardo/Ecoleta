@@ -1,0 +1,44 @@
+:root {
+    --title-color:#322153;
+    --primary-color: #34cb79;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    
+}
+body {
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+a {
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;;
+    
+}
+
+
+/* O * Afeta todos os elementos */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+   
+
+
+/* BOX MODEL
+
+Toda caixa tem: largura, altura, espaçamento, preenchimento
+bordas, cor, fundo, maneira que é vista (display),
+posicionamento, alinhamentos
+
+display block ocupa a linha toda e display inline ocupada somente o 
+tamanho da caixa*/

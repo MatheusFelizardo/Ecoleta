@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{#chama o layout para carregar antes de carregar propriamente a pagina#}
+
+{% set pageId = "page-home" %}
+{% block styles %}
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    <div class="content">
+
+        <header>
+            <img src="./assets/icones/logo.svg" alt="Logomarca">
+
+            <a href="/cadastrar_ponto">
+                <span></span>
+                Cadastre um ponto de coleta</a>
+        </header>
+
+        <main>
+
+            <h1>Seu marketplace de coleta de resíduos</h1>
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar ponto de coleta</strong>
+
+            </a>
+        </main>
+
+    </div>
+{% endblock content %}
+
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/script/index.js"></script>
+{% endblock scripts %}
+
+{#eliminar o que tem em todos
+deixar só o que é unico#}

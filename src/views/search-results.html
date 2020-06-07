@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {#chama o layout para carregar antes de carregar propriamente a pagina#}
+
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+ <title>Resultado da Pesquisa</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="./styles/search-results.css">
+{% endblock styles %}
+
+
+{% block content %}
+{% include "partials/page-header.html" %}
+            
+            {% if total > 0 %}
+            <main>
+                <h4> <strong> {{total}} pontos </strong> de coleta encontrados</h4>
+                
+                <div class="cards">
+
+                {% for place in places %}
+                    <div class="card">
+                            <img src="{{ place.image }}" alt="{{place.name}}">
+                            <br/>
+                            <h1> {{place.name}}</h1>
+                            <h3> {{place.items}}</h3>
+                            <p>{{place.city}}, {{place.state}} <br/>{{place.adress}}<br/>{{place.adress2}}
+                            </p>
+                        </div>
+                {% endfor %}                   
+                   
+               </main>  
+            
+                {%else%}
+                    <div class= "naoEncontrado">
+                    <h4>Nenhum local de coleta encontrado</h4>
+                    </div>
+                {% endif %}
+            
+{% endblock content %}
+
+
+{#eliminar o que tem em todos 
+deixar só o que é unico#}
